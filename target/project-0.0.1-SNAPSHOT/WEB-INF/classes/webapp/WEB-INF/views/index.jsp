@@ -5,33 +5,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 	<link rel="stylesheet" href="/webjars/bootstrap/4.1.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="index.css" type="text/css">
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	
-
-	<title>Hello, world!</title>
+ 	<link rel="stylesheet" href="webjars/bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+	<script src="webjars/jquery/3.0.0/jquery.min.js"></script>
+	<title>Hello Expertus!</title>
 </head>
 
-<body>
-<h1 class="cj">OJO</h1>
-
-<header>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="/images/dani1.png" alt="First slide">
-    </div>
-  </div>
-  
-</div>
-</header>
-
+<body class="bodyInit">
+ 	<h1>Hello Expertus!</h1>
+	<p>This is my projectsd f asd df df sdf f sdf sdf sdf sd sdfs df sdf sdf sf sdf sdf </p>
+	<a href="welcome" class="btn btn-success" role="button" aria-pressed="true">Primary link</a>
+		
 </body>
 </html>
 

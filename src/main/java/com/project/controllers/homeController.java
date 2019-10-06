@@ -3,7 +3,6 @@ package com.project.controllers;
 
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -13,10 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class homeController {
 
 	@RequestMapping(value="/index", method=RequestMethod.GET)
-	public String index(Model model) {
-		model.addAttribute("nombre", "cj");
+	public String index() {		
 		return "index";
 	}
 	
+	@RequestMapping(value="/welcome", method=RequestMethod.GET)
+	public String welcome() {
+		return "welcome";
+	}	
 	
 }

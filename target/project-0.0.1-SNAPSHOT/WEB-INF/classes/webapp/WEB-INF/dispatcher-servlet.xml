@@ -14,4 +14,15 @@
 	        <beans:property name="suffix" value=".jsp" />
 	    </beans:bean>
 	    
+	   <resources mapping="/css/**" location="classpath:/resources/css/" 
+        cache-period="31556926" />
+        
+       <resources mapping="/img/**" location="classpath:/resources/images/" 
+        cache-period="31556926" />	 
+       
+       <resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" 
+        cache-period="31556926" />	 
+        
+          	    
+	    
 </beans:beans>
