@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 4.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-4.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+		<!-- username /password -->
+        <property name="hibernate.connection.username">cj</property>
+        <property name="hibernate.connection.password">test</property>        
+		<!-- settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/vacations?useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.show_sql">true</property>
+		<!-- mapping -->
+        <mapping resource="hibernate/mapping/country.hbm.xml" /><mapping class="com.project.model.services.country.Country"/>
+        <mapping resource="hibernate/mapping/placeType.hbm.xml" /><mapping class="com.project.model.services.placeType.PlaceType"/>
+        <mapping resource="hibernate/mapping/countryPlan.hbm.xml" /><mapping class="com.project.model.services.countryPlan.CountryPlan"/>    
+        <mapping resource="hibernate/mapping/sales.hbm.xml" /><mapping class="com.project.model.services.sales.Sales"/>    
+    </session-factory>
+</hibernate-configuration>

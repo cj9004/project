@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.project.model.services.countryPlan.CountryPlan" table="COUNTRY_PLAN">
+		<id name="id" type="string" column="ID" />
+		<property name="idCountry" type="string" column="ID_COUNTRY"/>
+		<property name="description" type="string" column="DESCRIPTION"/>
+		<property name="idPlaceType" type="string" column="ID_TYPE_PLACE"/>
+	</class>
+</hibernate-mapping>
