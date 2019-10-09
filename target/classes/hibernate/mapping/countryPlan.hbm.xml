@@ -4,8 +4,17 @@
 <hibernate-mapping>
 	<class name="com.project.model.services.countryPlan.CountryPlan" table="COUNTRY_PLAN">
 		<id name="id" type="string" column="ID" />
-		<property name="idCountry" type="string" column="ID_COUNTRY"/>
-		<property name="description" type="string" column="DESCRIPTION"/>
-		<property name="idPlaceType" type="string" column="ID_TYPE_PLACE"/>
+		<property name="description" type="string" column="DESCRIPTION"/>		
+		<property name="price" type="long" column="PRICE"/>		
+		<many-to-one name="countryOrigin" class="com.project.model.services.country.Country" 
+       		not-null="true" column="ID_COUNTRY_ORG" unique="true" cascade="all">
+       </many-to-one>
+		<many-to-one name="countryDestination" class="com.project.model.services.country.Country" 
+       		not-null="true" column="ID_CONUNTRY_DES" unique="true" cascade="all">
+       </many-to-one>
+		<many-to-one name="placeType" class="com.project.model.services.placeType.PlaceType" 
+       		not-null="true" column="ID_TYPE_PLACE" unique="true" cascade="all">
+       </many-to-one>
+		
 	</class>
 </hibernate-mapping>

@@ -24,8 +24,7 @@
 						aria-haspopup="true" aria-expanded="false"> Services </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="destinations">Find your Next Destination</a> 
-						<a class="dropdown-item" href="estimations">Estimate your next vacations</a>
-						<a class="dropdown-item" href="savePlan">Saving money plan</a>
+						<a class="dropdown-item" href="savePlan">Payment Plan</a>
 					</div>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="sales">Special Sales</a></li>

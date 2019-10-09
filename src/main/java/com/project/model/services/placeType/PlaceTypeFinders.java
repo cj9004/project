@@ -1,5 +1,6 @@
 package com.project.model.services.placeType;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -18,11 +19,11 @@ public class PlaceTypeFinders {
 	/**
 	 * @return the list of all the Places Type name
 	 */
-	public static List<String> findAllPlaceType() {
+	public static ArrayList<PlaceType> findAllPlaceType() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
-		Query q = session.createQuery("SELECT name FROM PlaceType");
-		List<String> list = q.list();
+		Query q = session.createQuery(" FROM PlaceType");
+		ArrayList<PlaceType> list = (ArrayList<PlaceType>) q.list();
 		return list;		
 	}
 }

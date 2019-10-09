@@ -1,6 +1,7 @@
 package com.project.model.services.country;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -15,11 +16,11 @@ import com.project.controllers.utils.HibernateUtil;
  */
 public class CountryFinders {
 
-	public static List<String> findAllCountries() {
+	public static ArrayList<Country> findAllCountries() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
-		Query q = session.createQuery("SELECT name FROM Country");
-		List<String> list = q.list();
+		Query<Country> q = session.createQuery(" FROM Country");
+		ArrayList<Country> list = (ArrayList<Country>) q.list();
 		return list;		
 	}
 	

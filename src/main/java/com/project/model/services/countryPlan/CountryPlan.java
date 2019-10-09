@@ -1,5 +1,8 @@
 package com.project.model.services.countryPlan;
 
+import com.project.model.services.country.Country;
+import com.project.model.services.placeType.PlaceType;
+
 /**
  * 
  * CountryPlan Class
@@ -11,11 +14,15 @@ public class CountryPlan {
 	
 	private String id;
 	
-	private String idCountry;
+	private Country countryOrigin;
+
+	private Country countryDestination;
 	
 	private String description; 
 	
-	private String idPlaceType;
+	private PlaceType placeType;
+	
+	private long price;
 
 	public String getId() {
 		return id;
@@ -25,13 +32,7 @@ public class CountryPlan {
 		this.id = id;
 	}
 
-	public String getIdCountry() {
-		return idCountry;
-	}
-
-	public void setIdCountry(String idCountry) {
-		this.idCountry = idCountry;
-	}
+	
 
 	public String getDescription() {
 		return description;
@@ -41,13 +42,41 @@ public class CountryPlan {
 		this.description = description;
 	}
 
-	public String getIdPlaceType() {
-		return idPlaceType;
+	public Country getCountryOrigin() {
+		return countryOrigin;
 	}
 
-	public void setIdPlaceType(String idPlaceType) {
-		this.idPlaceType = idPlaceType;
+	public void setCountryOrigin(Country country) {
+		this.countryOrigin = country;
 	}
+
+	public PlaceType getPlaceType() {
+		return placeType;
+	}
+
+	public void setPlaceType(PlaceType placeType) {
+		this.placeType = placeType;
+	}
+
+	public Country getCountryDestination() {
+		return countryDestination;
+	}
+
+	public void setCountryDestination(Country countryDestination) {
+		this.countryDestination = countryDestination;
+	}
+
+	public long getPrice() {
+		return price;
+	}
+
+	public void setPrice(long price) {
+		this.price = price;
+	}
+
+
+
+	
 	
 
 }

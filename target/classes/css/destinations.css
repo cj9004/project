@@ -1,6 +1,6 @@
 .searchTitle{
 	font-size: 40px;
-	color:#669999;
+	color:#e69900;
 	text-align: center;		
 }
 
@@ -12,4 +12,9 @@
 .section{
 	margin: 20px;
 }
+.section h2{
+	color: #bf313e;
+}
+
+
 

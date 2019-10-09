@@ -18,7 +18,7 @@ public class SalesFinders {
 	public static List<String> findAllSales() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		session.beginTransaction();
-		Query q = session.createQuery("SELECT name FROM Sales");
+		Query q = session.createQuery("SELECT description FROM Sales");
 		List<String> list = q.list();
 		return list;		
 	}

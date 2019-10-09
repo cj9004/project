@@ -1,0 +1,23 @@
+.title{
+	font-size: 40px;
+	color:#e69900;
+	text-align: center;		
+}
+
+.section{
+	border: 10px solid #669999;
+	margin: 20px;
+}
+
+.section p{
+	color: #001a4d;
+	text-align: center;
+	-webkit-text-stroke: thin;
+}
+
+.form{
+	margin: 20px;
+}
+
+
+
