@@ -2,8 +2,7 @@ package com.project.model.services.country;
 
 
 import java.util.ArrayList;
-import java.util.List;
-
+import javax.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import com.project.controllers.utils.HibernateUtil;
@@ -14,6 +13,7 @@ import com.project.controllers.utils.HibernateUtil;
  * @since 6/10/2019
  *
  */
+@Transactional
 public class CountryFinders {
 
 	public static ArrayList<Country> findAllCountries() {
@@ -21,6 +21,7 @@ public class CountryFinders {
 		session.beginTransaction();
 		Query<Country> q = session.createQuery(" FROM Country");
 		ArrayList<Country> list = (ArrayList<Country>) q.list();
+		session.close();
 		return list;		
 	}
 	

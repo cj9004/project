@@ -3,6 +3,8 @@ package com.project.model.services.countryPlan;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
@@ -14,6 +16,7 @@ import com.project.controllers.utils.HibernateUtil;
  * @since 7/10/2019
  *
  */
+@Transactional
 public class CountryPlanFinders {
 
 	public static ArrayList<CountryPlan> finByOriginDestinationType(String origin, String destination, String type) {
@@ -26,6 +29,7 @@ public class CountryPlanFinders {
 		q.setParameter("destination", destination);
 		q.setParameter("type", type);
 		list = (ArrayList<CountryPlan>) q.list();
+		session.close();
 		return list; 
 	}
 

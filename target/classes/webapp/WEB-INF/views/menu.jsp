@@ -18,7 +18,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<div id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="index">Home</a></li>
+				<li class="nav-item active"><a class="nav-link" href="welcome">Home</a></li>
 				<li class="nav-item dropdown">
 					<a	class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false"> Services </a>
@@ -28,7 +28,7 @@
 					</div>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="sales">Special Sales</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+				<li class="nav-item"><a class="nav-link" href="contactUs">Contact us</a></li>
 			</ul>
 		</div>
 	</nav>

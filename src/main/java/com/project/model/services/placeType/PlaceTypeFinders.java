@@ -3,6 +3,8 @@ package com.project.model.services.placeType;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
@@ -14,6 +16,7 @@ import com.project.controllers.utils.HibernateUtil;
  * @since 7/10/2019
  *
  */
+@Transactional
 public class PlaceTypeFinders {
 
 	/**
@@ -24,6 +27,7 @@ public class PlaceTypeFinders {
 		session.beginTransaction();
 		Query q = session.createQuery(" FROM PlaceType");
 		ArrayList<PlaceType> list = (ArrayList<PlaceType>) q.list();
+		session.close();
 		return list;		
 	}
 }

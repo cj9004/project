@@ -1,0 +1,13 @@
+.salesCol{
+	width: 40%;
+	margin: 30px;
+}
+
+.salesCol img{
+	width: 100%;
+}
+
+.title{
+	text-align: center;
+	color: #e69900;
+}

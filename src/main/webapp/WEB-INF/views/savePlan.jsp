@@ -32,16 +32,19 @@
 				<div class="col-md-4">
 					<div class="form-group ">
 						<label>How many people</label>
-						<input type="text" name="people" class="form-control">
+						<input type="number" name="people" class="form-control" required maxlength="2">
 					</div>
 				</div>
 				<div class="col-md-4">
 					<div class="form-group ">
 						<label>How many months</label>
-						<input type="text" class="form-control" name="months">
+						<input type="number" class="form-control" name="months" required maxlength="2">
 					</div>
 				</div>
 			</div>
 			<button class="btn btn-success btn-block">Calculate</button>
 		</form>
+		<div class="paymentPlan">${paymentPlan}</div>		
 	</div>
+</body>	
+	

@@ -67,10 +67,26 @@ public class servicesController {
 	@RequestMapping(value="/calculatePlan", method=RequestMethod.POST)
 	public String calculatePlan(Integer months, Integer people, String plan, Model m) {
 		PaymentPlan paymentPlan = PaymentPlanCalculation.calculateAmount(months, people, plan);
+		String paymentMessage = getPaymentInformation(paymentPlan);
 		ArrayList<CountryPlan> listCountryPlan = (ArrayList<CountryPlan>) CountryPlanFinders.finAll();
 		m.addAttribute("listPlan", listCountryPlan);
-		m.addAttribute("paymentPlan", paymentPlan);
+		m.addAttribute("paymentPlan", paymentMessage);
 		return SAVE_PLAN_VIEW;
+	}
+
+
+	/**
+	 * Create the Payment plan message
+	 * @param paymentPlan
+	 * @return
+	 */
+	private String getPaymentInformation(PaymentPlan paymentPlan) {
+		String message = "";
+		if(paymentPlan != null) {
+			message = "Plan Description: " + paymentPlan.getPlan().getDescription() + " <BR> Monthly Amount(CAD): " + paymentPlan.getValueMonth() +
+					"<BR> Months: " + paymentPlan.getMonths();
+		}
+		return message;
 	}
 
 }

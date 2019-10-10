@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.project.model.services.sales.Sales" table="TYPE_PLACE">
+	<class name="com.project.model.services.sales.Sales" table="SALES">
 		<id name="id" type="string" column="ID" />
 		<property name="description" type="string" column="DESCRIPTION"/>
 	</class>

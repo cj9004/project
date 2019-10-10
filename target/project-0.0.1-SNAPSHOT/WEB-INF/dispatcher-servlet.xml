@@ -19,6 +19,9 @@
         
        <resources mapping="/img/**" location="classpath:/resources/images/" 
         cache-period="31556926" />	 
+
+       <resources mapping="/js/**" location="classpath:/resources/js/" 
+        cache-period="31556926" />	 
        
        <resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" 
         cache-period="31556926" />	 

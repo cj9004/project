@@ -10,7 +10,9 @@
 <link rel="stylesheet"
 	href="webjars/bootstrap/4.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/destinations.css" type="text/css">
+<link rel="stylesheet" href="css/modalInfo.css" type="text/css">
 <script src="webjars/jquery/3.0.0/jquery.min.js"></script>
+<script src="js/destinations.js"></script>
 <title>Find your perfect destination</title>
 </head>
 
@@ -55,8 +57,7 @@
 		</div>
 	</form>
 	<div class="section">
-		<h2>${message}</h2>
-		<table class="table table-striped table-hover">
+		<table class="table table-striped table-hover" id="destinationTable">
 			<thead>
 				<tr>
 					<th scope="col">Country of Origin</th>
@@ -83,7 +84,12 @@
 			</tbody>
 		</table>
 	</div>
+	<jsp:include page="modalInfo.jsp" />
 </body>
+
+<script type="text/javascript">
+var message = '<c:out value="${message}"/>';
+</script>
 </html>
 
 
